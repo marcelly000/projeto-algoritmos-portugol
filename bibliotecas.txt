@@ -1,0 +1,46 @@
+programa
+{
+  inclua biblioteca Util --> u
+  inclua biblioteca Texto --> t
+  inclua biblioteca Calendario --> c
+  inclua biblioteca Matematica --> m
+
+  funcao inicio()
+  {
+    cadeia nome
+    inteiro idade
+    inteiro numero
+    real resultado
+
+    escreva(" CRIANDO SEU PERFIL \n\n")
+
+    escreva("Digite seu nome: ")
+    leia(nome)
+
+    escreva("Digite sua idade: ")
+    leia(idade)
+
+    escreva("\nGerando seu perfil...")
+    u.aguarde(1500)
+    numero = u.sorteia(1, 100)
+    cadeia nome_maiusculo = t.caixa_alta(nome)
+    inteiro quantidade_letras = t.numero_caracteres(nome)
+
+    resultado = m.potencia(idade, 2)
+    resultado = m.arredondar(resultado, 2)
+
+    inteiro ano = c.ano_atual()
+    inteiro mes = c.mes_atual()
+
+    escreva("\n\n SEU PERFIL \n")
+    escreva("Nome: ", nome_maiusculo, "\n")
+    escreva("Quantidade de caracteres do nome: ", quantidade_letras, "\n")
+    escreva("Idade: ", idade, " anos\n")
+    escreva("Idade ao quadrado: ", resultado, "\n")
+    escreva("Numero da sorte: ", numero, "\n")
+    escreva("Ano atual: ", ano, "\n")
+    escreva("Mes atual: ", mes, "\n")
+
+    escreva("\nPerfil criado com sucesso!")
+  }
+}
