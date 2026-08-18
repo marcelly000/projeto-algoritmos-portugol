@@ -31,7 +31,7 @@ real numero1, numero2, resultado = 0
 				resultado = numero1 / numero2
 				pare
 				caso contrario: 
-				escreva("\n Opção inválida! Deixe de ser burro.")
+				escreva("\n Opção inválida! Tente novamente.")
 				}
 			}
 			se (opcao >= 1 e opcao <= 4)
