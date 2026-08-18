@@ -1,0 +1,29 @@
+programa
+{
+  funcao inicio()
+  {
+    real notas[10]
+    real soma = 0.0
+    real media
+    inteiro i
+    inteiro cont = 0
+    para (i = 0; i < 10; i++)
+    {
+      escreva("Digite a ", i + 1, " nota: ")
+      leia(notas[i])
+      soma = soma + notas[i]
+    }
+
+    media = soma / 10
+      para (i = 0; i < 10; i++)
+      {
+        se (notas[i] > media)
+        {
+          cont++
+        }
+      }
+
+      escreva("\nMedia da turma: ", media)
+      escreva("\nQuantidade de notas acima da media: ", cont)
+    }
+}
