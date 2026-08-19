@@ -1,0 +1,40 @@
+programa
+{
+  funcao inicio()
+  {
+    inteiro m[4][3]
+    inteiro i
+    inteiro j
+    inteiro soma
+    para (i = 0; i < 4; i++)
+    {
+      para (j = 0; j < 3; j++)
+      {
+        escreva("Digite o valor [", i, "][", j, "]: ")
+        leia(m[i][j])
+      }
+    }
+    escreva("\nSoma das linhas:\n")
+    para (i = 0; i < 4; i++)
+    {
+      soma = 0
+      para (j = 0; j < 3; j++)
+      {
+        soma = soma + m[i][j]
+      }
+      escreva("Linha ", i + 1, ": ", soma, "\n")
+    }
+    escreva("\nSoma das colunas:\n")
+    para (j = 0; j < 3; j++)
+    {
+      soma = 0
+      para (i = 0; i < 4; i++)
+      {
+        soma = soma + m[i][j]
+      }
+
+      escreva("Coluna ", j + 1, ": ", soma, "\n")
+    }
+  }
+}
+
