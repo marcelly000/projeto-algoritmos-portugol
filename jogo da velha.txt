@@ -1,0 +1,68 @@
+programa
+{
+  funcao inicio()
+  {
+    cadeia tab[3][3]
+    inteiro i
+    inteiro j
+    logico venceu = falso
+
+    tab[0][0] = "X"
+    tab[0][1] = "O"
+    tab[0][2] = "O"
+
+    tab[1][0] = "O"
+    tab[1][1] = "X"
+    tab[1][2] = "O"
+
+    tab[2][0] = "O"
+    tab[2][1] = "O"
+    tab[2][2] = "X"
+
+    escreva("Tabuleiro:\n\n")
+    para (i = 0; i < 3; i++)
+    {
+      para (j = 0; j < 3; j++)
+      {
+        escreva(tab[i][j], "\t")
+      }
+
+     escreva("\n")
+    }
+
+    para (i = 0; i < 3; i++)
+    {
+      se (tab[i][0] == tab[i][1] e tab[i][1] == tab[i][2])
+      {
+        escreva("\nJogador ", tab[i][0], " venceu!")
+        venceu = verdadeiro
+      }
+    }
+
+    para (j = 0; j < 3; j++)
+    {
+      se (tab[0][j] == tab[1][j] e tab[1][j] == tab[2][j])
+      {
+        escreva("\nJogador ", tab[0][j], " venceu!")
+        venceu = verdadeiro
+      }
+    }
+
+    se (tab[0][0] == tab[1][1] e tab[1][1] == tab[2][2])
+    {
+      escreva("\nJogador ", tab[0][0], " venceu!")
+      venceu = verdadeiro
+    }
+
+    se (tab[0][2] == tab[1][1] e tab[1][1] == tab[2][0])
+    {
+      escreva("\nJogador ", tab[0][2], " venceu!")
+      venceu = verdadeiro
+    }
+
+    se (venceu == falso)
+    {
+      escreva("\nNinguem venceu.")
+    }
+  }
+}
