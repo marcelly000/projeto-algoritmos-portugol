@@ -1,0 +1,97 @@
+Totem autoatendimento
+programa
+
+{
+
+	inclua biblioteca Util 
+
+	funcao inicio()
+
+	{
+
+		real hamburguer = 25, batata = 15, refri = 6, brownie = 10, energetico = 7.50, pizza = 30, valortotal = 0
+
+		inteiro opcao = 1, contador = 5
+
+
+		enquanto (opcao!=7){
+
+		escreva("Escolha opção:\n 1- Hambúrguer R$25,00\n 2- Batata Frita R$15,00\n 3- Refrigerante R$6,00\n 4- Brownie R$10,00\n 5- Energético R$7,50\n 6- Pizza individual R$30,00\n 7- Finalizar pedido\n")
+
+		leia (opcao)
+
+
+		escolha (opcao)
+
+		{
+
+		caso 1:
+
+		valortotal = valortotal+25
+
+		pare
+
+		caso 2:
+
+		valortotal = valortotal+15
+
+		pare
+
+		caso 3:
+
+		valortotal = valortotal+6
+
+		pare
+
+		caso 4:
+
+		valortotal = valortotal+10
+
+		pare
+
+		caso 5:
+
+		valortotal = valortotal+7.50
+
+		pare
+
+		caso 6:
+
+		valortotal = valortotal+30
+
+		pare
+
+		caso 7:
+
+		escreva("Fim de compra")
+
+		caso contrario:
+
+		escreva("Opção inválida!")
+
+		}
+
+		}
+
+
+		enquanto (contador > 0)
+
+		{
+
+			limpa()
+
+			escreva ("Imprimindo nota fiscal em: ", contador)
+
+		  	
+
+		  	contador = contador - 1
+
+		  	Util.aguarde(1000) // Aguarda 1000 millisegundos (1 segundo)
+
+		escreva ("\n Valor total = ", valortotal)
+
+		}
+
+}
+
+}
